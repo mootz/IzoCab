@@ -1,0 +1,210 @@
+extends ../layout/default
+
+block content
+
+    .t-catalog.section
+        ul._list
+            li._item
+                a(href="#")._link IzoCab <sub>™</sub>
+            li._item
+                a(href="#")._link IzoCab <sub>™</sub> Air
+            li._item
+                a(href="#")._link IzoCab <sub>™</sub> Air Plus
+            li._item
+                a(href="#")._link IzoCab <sub>™</sub> Exclusive
+            li._item
+                a(href="#")._link IzoCab <sub>™</sub> Конструктор
+
+    .first.section
+        ._info
+            h1._title IzoCab
+
+            p._desc Вокальные звукоизоляционные кабинки лучшего качества
+
+            ._btns
+                a(href="#")._button.button
+                    span._desktop Перейти
+                    span._mobile Модельный ряд
+
+                a(href="#")._share
+                    svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                        path(d='M20 9.88294L11.5314 1.41431V7.05446C5.16281 7.05446 0 12.2173 0 18.5859C2.33957 14.3214 6.98141 12.1225 11.5314 12.6861V18.3515L20 9.88294Z' fill='url(#paint0_linear)')
+                        defs
+                            lineargradient#paint0_linear(x1='20.3429' y1='-7.31458' x2='-26.3782' y2='11.3426' gradientUnits='userSpaceOnUse')
+                                stop(stop-color='#8E1FE6')
+                                stop(offset='1' stop-color='#531FE6')
+                    svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' class="active")
+                        path(d='M20 9.88294L11.5314 1.41431V7.05446C5.16281 7.05446 0 12.2173 0 18.5859C2.33957 14.3214 6.98141 12.1225 11.5314 12.6861V18.3515L20 9.88294Z' fill='#fff')
+
+
+        ._gallery
+            ._container.swiper-container
+                ._wrapper.swiper-wrapper
+
+                    ._slide.swiper-slide
+                        a(href="img/first-gallery_1.jpg" data-fancybox)._img
+                            img(src="img/first-gallery_1.jpg", alt="izocab")
+
+                    ._slide.swiper-slide
+                        a(href="img/first-gallery_2.jpg" data-fancybox)._img
+                            img(src="img/first-gallery_2.jpg", alt="izocab")
+
+                    ._slide.swiper-slide
+                        a(href="img/first-gallery_3.jpg" data-fancybox)._img
+                            img(src="img/first-gallery_3.jpg", alt="izocab")
+
+                    ._slide.swiper-slide
+                        a(href="img/first-gallery_4.jpg" data-fancybox)._img
+                            img(src="img/first-gallery_4.jpg", alt="izocab")
+
+                    ._slide.swiper-slide
+                        a(href="img/first-gallery_5.jpg" data-fancybox)._img
+                            img(src="img/first-gallery_5.jpg", alt="izocab")
+
+
+                ._pagination.swiper-pagination
+
+                ._prev.swiper-button-prev
+                    ._prev-wrap
+                        span Назад
+                        svg(width='30' height='17' viewBox='0 0 30 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            line(y1='8.5' x2='30' y2='8.5' stroke='#171F36')
+                            mask#mask0(mask-type='alpha' maskUnits='userSpaceOnUse' x='19' y='0' width='11' height='17')
+                                rect(x='19' width='11' height='17' fill='#C4C4C4')
+                            g(mask='url(#mask0)')
+                                circle(cx='30' cy='-2' r='10.5' stroke='#171F36')
+                                circle(cx='30' cy='19' r='10.5' stroke='#171F36')
+
+
+                ._next.swiper-button-next
+                    ._next-wrap
+                        span Дальше
+                        svg(width='30' height='17' viewBox='0 0 30 17' fill='none' xmlns='http://www.w3.org/2000/svg')
+                            line(y1='8.5' x2='30' y2='8.5' stroke='#171F36')
+                            mask#mask0(mask-type='alpha' maskUnits='userSpaceOnUse' x='19' y='0' width='11' height='17')
+                                rect(x='19' width='11' height='17' fill='#C4C4C4')
+                            g(mask='url(#mask0)')
+                                circle(cx='30' cy='-2' r='10.5' stroke='#171F36')
+                                circle(cx='30' cy='19' r='10.5' stroke='#171F36')
+
+
+    .goods.section
+        h2._title.section__title.section__title--circle Наши товары
+
+        ._list
+
+            ._item
+                p._name
+                    span._count 01
+
+                    span._name-text IzoCab<sub>™</sub>
+
+                ._img-wrap
+                    ._actions
+                        ._action.goods__time
+                            p._action-text Успей купить
+
+                        ._action.goods__sale
+                            p._action-text -25
+                                span %
+
+                    img(src="img/goods/1.png", alt="IzoCab")
+
+                p._type Базовая изоляция
+
+                ._prices
+                    p._old-price 61 000
+                        span ₽
+
+                    p._price 45 750
+                        span ₽
+
+                ._btns
+                    button(type="button")._btn.goods__btn-cart.button-reverse В корзину
+
+                    button(type="button")._btn.goods__btn-cred.button-reverse
+                        span В кредит
+
+
+            ._item
+                p._name
+                    span._count 02
+
+                    span._name-text IzoCab<sub>™</sub> Air
+
+                ._img-wrap
+                    img(src="img/goods/2.png", alt="IzoCab")
+
+                p._type Базовая изоляция
+
+                ._prices
+                    p._old-price 99 000
+                        span ₽
+
+                    p._price 84 150
+                        span ₽
+
+                ._btns
+                    button(type="button")._btn.goods__btn-cart.button-reverse В корзину
+
+                    button(type="button")._btn.goods__btn-cred.button-reverse
+                        span В кредит
+
+
+            ._item
+                p._name
+                    span._count 03
+
+                    span._name-text IzoCab<sub>™</sub> Mega
+
+                ._img-wrap
+                    ._actions
+                        ._action.goods__percent
+                            p._action-text %
+
+                        ._action.goods__sale
+                            p._action-text -10
+                                span %
+
+                    img(src="img/goods/3.png", alt="IzoCab")
+
+                p._type Продвинутая изоляция
+
+                ._prices
+                    p._old-price 179 000
+                        span ₽
+
+                    p._price 161 100
+                        span ₽
+
+                ._btns
+                    button(type="button")._btn.goods__btn-cart.button-reverse В корзину
+
+                    button(type="button")._btn.goods__btn-cred.button-reverse
+                        span В кредит
+
+
+            ._item
+                p._name
+                    span._count 04
+
+                    span._name-text IzoCab<sub>™</sub> Extra
+
+                ._img-wrap
+                    img(src="img/goods/4.png", alt="IzoCab")
+
+                p._type Продвинутая изоляция
+
+                ._prices
+                    p._price 45 750
+                        span ₽
+
+                ._btns
+                    button(type="button")._btn.goods__btn-cart.button-reverse В корзину
+
+                    button(type="button")._btn.goods__btn-cred.button-reverse
+                        span В кредит
+
+
+
+
