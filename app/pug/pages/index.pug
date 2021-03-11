@@ -2,22 +2,22 @@ extends ../layout/default
 
 block content
 
-    .t-catalog.section
+    section.t-catalog.section
         ul._list
             li._item
-                a(href="#")._link IzoCab <sub>™</sub>
+                a(href="#")._link Vocaton <sub>™</sub>
             li._item
-                a(href="#")._link IzoCab <sub>™</sub> Air
+                a(href="#")._link Vocaton <sub>™</sub> Air
             li._item
-                a(href="#")._link IzoCab <sub>™</sub> Air Plus
+                a(href="#")._link Vocaton <sub>™</sub> Air Plus
             li._item
-                a(href="#")._link IzoCab <sub>™</sub> Exclusive
+                a(href="#")._link Vocaton <sub>™</sub> Exclusive
             li._item
-                a(href="#")._link IzoCab <sub>™</sub> Конструктор
+                a(href="#")._link Vocaton <sub>™</sub> Конструктор
 
-    .first.section
+    section.first.section
         ._info
-            h1._title IzoCab
+            h1._title Vocaton
 
             p._desc Вокальные звукоизоляционные кабинки лучшего качества
 
@@ -43,23 +43,23 @@ block content
 
                     ._slide.swiper-slide
                         a(href="img/first-gallery_1.jpg" data-fancybox)._img
-                            img(src="img/first-gallery_1.jpg", alt="izocab")
+                            img(src="img/first-gallery_1.jpg", alt="Vocaton")
 
                     ._slide.swiper-slide
                         a(href="img/first-gallery_2.jpg" data-fancybox)._img
-                            img(src="img/first-gallery_2.jpg", alt="izocab")
+                            img(src="img/first-gallery_2.jpg", alt="Vocaton")
 
                     ._slide.swiper-slide
                         a(href="img/first-gallery_3.jpg" data-fancybox)._img
-                            img(src="img/first-gallery_3.jpg", alt="izocab")
+                            img(src="img/first-gallery_3.jpg", alt="Vocaton")
 
                     ._slide.swiper-slide
                         a(href="img/first-gallery_4.jpg" data-fancybox)._img
-                            img(src="img/first-gallery_4.jpg", alt="izocab")
+                            img(src="img/first-gallery_4.jpg", alt="Vocaton")
 
                     ._slide.swiper-slide
                         a(href="img/first-gallery_5.jpg" data-fancybox)._img
-                            img(src="img/first-gallery_5.jpg", alt="izocab")
+                            img(src="img/first-gallery_5.jpg", alt="Vocaton")
 
 
                 ._pagination.swiper-pagination
@@ -88,7 +88,7 @@ block content
                                 circle(cx='30' cy='19' r='10.5' stroke='#171F36')
 
 
-    .goods.section
+    section.goods.section
         h2._title.section__title.section__title--circle Наши товары
 
         ._list
@@ -97,7 +97,7 @@ block content
                 p._name
                     span._count 01
 
-                    span._name-text IzoCab<sub>™</sub>
+                    span._name-text Vocaton<sub>™</sub>
 
                 ._img-wrap
                     ._actions
@@ -108,7 +108,7 @@ block content
                             p._action-text -25
                                 span %
 
-                    img(src="img/goods/1.png", alt="IzoCab")
+                    img(src="img/goods/1.png", alt="Vocaton")
 
                 p._type Базовая изоляция
 
@@ -130,10 +130,10 @@ block content
                 p._name
                     span._count 02
 
-                    span._name-text IzoCab<sub>™</sub> Air
+                    span._name-text Vocaton<sub>™</sub> Air
 
                 ._img-wrap
-                    img(src="img/goods/2.png", alt="IzoCab")
+                    img(src="img/goods/2.png", alt="Vocaton")
 
                 p._type Базовая изоляция
 
@@ -155,7 +155,7 @@ block content
                 p._name
                     span._count 03
 
-                    span._name-text IzoCab<sub>™</sub> Mega
+                    span._name-text Vocaton<sub>™</sub> Mega
 
                 ._img-wrap
                     ._actions
@@ -166,7 +166,7 @@ block content
                             p._action-text -10
                                 span %
 
-                    img(src="img/goods/3.png", alt="IzoCab")
+                    img(src="img/goods/3.png", alt="Vocaton")
 
                 p._type Продвинутая изоляция
 
@@ -188,10 +188,10 @@ block content
                 p._name
                     span._count 04
 
-                    span._name-text IzoCab<sub>™</sub> Extra
+                    span._name-text Vocaton<sub>™</sub> Extra
 
                 ._img-wrap
-                    img(src="img/goods/4.png", alt="IzoCab")
+                    img(src="img/goods/4.png", alt="Vocaton")
 
                 p._type Продвинутая изоляция
 
@@ -206,5 +206,170 @@ block content
                         span В кредит
 
 
+    section.calc.section
+        h2._title.section__title Кабинка по вашим размерам
 
+        ._columns
+            ._left
+                p._desc Звукоизоляционная кабина <span>Vocaton™ по вашим размерам</span> позволит Вам полноценно заниматься творчеством и мультимедиа продакшном в правильной акустике
+
+                //- ._l-img
+                //-     img(src="img/calc-img2.png", alt="Vocaton")
+
+            ._right
+                ._item.calc__f-item.active
+                    ._header
+                        ._number
+                            span._number-prev Шаг
+                            span._number-text 01
+
+                        ._h-desc
+                            p._h-name Параметры кабинки
+                            p._h-desc-name Заполните обязательные поля ( <span>*</span> ) для перехода к следующему шагу
+
+                        button(type="button")._f-check.button-reverse.disable
+
+                            span Просмотреть
+
+                            i
+                                svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M2.0249 13.0585L13.4316 1.6435C13.5491 1.52516 13.7082 1.4585 13.8741 1.4585H13.8749C14.0407 1.4585 14.1999 1.52433 14.3166 1.64183L18.3582 5.6835C18.4757 5.801 18.5416 5.96016 18.5416 6.12516C18.5416 6.291 18.4757 6.45016 18.3582 6.56766L6.94157 17.976L2.0249 13.0585Z' fill='black')
+                                    path(d='M18.8066 4.9523L19.2175 4.54147C19.7216 4.03647 20 3.37063 20 2.66647C20 1.94647 19.72 1.27647 19.2191 0.784799C18.2175 -0.226867 16.4566 -0.226034 15.4575 0.783133L15.0466 1.19397L18.8066 4.9523Z' fill='black')
+                                    path(d='M1.6865 13.8985L0.0281712 19.1885C-0.0409955 19.4102 0.0181712 19.6527 0.183171 19.8168C0.301505 19.936 0.461505 20.0002 0.624838 20.0002C0.687338 20.0002 0.749838 19.991 0.812338 19.9718L6.1015 18.3135L1.6865 13.8985Z' fill='black')
+                                    path(d='M5.808 7.32331C5.968 7.32331 6.128 7.26248 6.24966 7.13998L10.2847 3.10497C10.5005 2.88997 10.7888 2.80497 11.0713 2.82581L12.058 1.83831C11.2047 1.38164 10.1197 1.50247 9.4005 2.22081L5.3655 6.25581C5.12133 6.49998 5.12133 6.89581 5.3655 7.13998C5.488 7.26164 5.64716 7.32331 5.808 7.32331Z' fill='black')
+
+                    ._item-content
+                        ._c-columns
+                            ._c-column
+                                ._c-item
+                                    label._label(for="budget") Ваш бюджет <span>*</span>
+                                    input._input(type="text" placeholder="50 - 100 тыс." name="budget" id="budget")
+
+                                ._c-item
+                                    label._label(for="size") Размер кабинки (см) и кол-во в ней человек <span>*</span>
+                                    input._input(type="text" placeholder="160*160*200 см / 2 человека" name="size" id="size")
+
+
+                            ._c-column
+                                ._c-item
+                                    label._label(for="type") Назначение кабины
+                                    input._input(type="text" placeholder="Озвучивание фильмов" name="type" id="type")
+
+                                ._c-item
+                                    label._label(for="sound") Выберите степень звукоизоляции
+                                    select._select(type="text" name="sound" id="sound")
+                                        option  Стандартная
+                                        option  Продвинутая
+
+
+
+                        ._c-columns
+                            ._c-column
+                                ._c-item
+                                    label._label(for="color") Цвет кабинки внутри
+                                    select._select.color-inner(type="text" name="color" id="color")
+                                        option  Красный
+                                        option  Черный
+                                        option  Бордовый
+                                        option  Голубой
+                                        option  Желтый
+                                        option  Зеленый
+                                        option  Розовый
+                                        option  Синий
+                                        option  Фиолетовый
+                                        option  Оранжевый
+
+                            ._c-column
+                                ._c-item
+                                    label._label(for="color") Цвет кабинки снаружи
+                                    select._select.color-outer(type="text" name="color" id="color")
+                                        option  Бежевый
+                                        option  Красный
+                                        option  Черный
+                                        option  Синий
+                                        option  Графит
+                                        option  Сталь
+
+                        ._c-item.calc__f-last-item
+                            label._label(for="design") Укажите ссылку на файл с чертежом
+                            input._input(type="text" placeholder="www.dropbox.com/doc_1" name="design" id="design")
+
+                        ._h-desc-name.mobile
+                            p Заполните обязательные поля ( <span>*</span> ) для перехода к следующему шагу
+
+                ._item.calc__s-item.non-active
+                    ._header
+                        ._number
+                            span._number-prev Шаг
+                            span._number-text 02
+
+                        ._h-desc
+                            p._h-name Данные для связи
+                            p._h-desc-name Заполните обязательные поля ( <span>*</span> ) для перехода к следующему шагу
+
+                        button(type="button")._s-check.button-reverse
+                            span Просмотреть
+
+                        button(type="button")._s-mobile
+                            span.see
+                                svg(width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M21.9311 10.5425C21.7479 10.2678 17.9019 3.67465 11.0341 3.67465C4.16623 3.67465 0.320281 10.2678 0.137124 10.5425C-0.0460334 10.8172 -0.0460334 11.1835 0.137124 11.4582C0.320281 11.7329 4.16628 18.3261 11.0341 18.3261C17.902 18.3261 21.748 11.7329 21.9311 11.4582C22.0227 11.1835 22.0227 10.8172 21.9311 10.5425ZM11.0341 15.5789C8.4701 15.5789 6.45554 13.5644 6.45554 11.0004C6.45554 8.43639 8.4701 6.42179 11.0341 6.42179C13.5982 6.42179 15.6127 8.43635 15.6127 11.0004C15.6127 13.5644 13.5981 15.5789 11.0341 15.5789Z' fill='#171F36')
+                                    path(d='M11.035 8.25327C9.47826 8.25327 8.28784 9.44368 8.28784 11.0004C8.28784 12.5571 9.47826 13.7475 11.035 13.7475C12.5917 13.7475 13.7821 12.5571 13.7821 11.0004C13.7821 9.44368 12.5917 8.25327 11.035 8.25327ZM11.9507 11.0004C11.4013 11.0004 11.035 10.6341 11.035 10.0847C11.035 9.53528 11.4013 9.16901 11.9507 9.16901C12.5001 9.16901 12.8664 9.53528 12.8664 10.0847C12.8664 10.6341 12.5001 11.0004 11.9507 11.0004Z' fill='#171F36')
+
+
+                            span.edit
+                                svg(width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    path(d='M2.0249 13.0585L13.4316 1.6435C13.5491 1.52516 13.7082 1.4585 13.8741 1.4585H13.8749C14.0407 1.4585 14.1999 1.52433 14.3166 1.64183L18.3582 5.6835C18.4757 5.801 18.5416 5.96016 18.5416 6.12516C18.5416 6.291 18.4757 6.45016 18.3582 6.56766L6.94157 17.976L2.0249 13.0585Z' fill='black')
+                                    path(d='M18.8066 4.9523L19.2175 4.54147C19.7216 4.03647 20 3.37063 20 2.66647C20 1.94647 19.72 1.27647 19.2191 0.784799C18.2175 -0.226867 16.4566 -0.226034 15.4575 0.783133L15.0466 1.19397L18.8066 4.9523Z' fill='black')
+                                    path(d='M1.6865 13.8985L0.0281712 19.1885C-0.0409955 19.4102 0.0181712 19.6527 0.183171 19.8168C0.301505 19.936 0.461505 20.0002 0.624838 20.0002C0.687338 20.0002 0.749838 19.991 0.812338 19.9718L6.1015 18.3135L1.6865 13.8985Z' fill='black')
+                                    path(d='M5.808 7.32331C5.968 7.32331 6.128 7.26248 6.24966 7.13998L10.2847 3.10497C10.5005 2.88997 10.7888 2.80497 11.0713 2.82581L12.058 1.83831C11.2047 1.38164 10.1197 1.50247 9.4005 2.22081L5.3655 6.25581C5.12133 6.49998 5.12133 6.89581 5.3655 7.13998C5.488 7.26164 5.64716 7.32331 5.808 7.32331Z' fill='black')
+
+
+
+                    ._item-content
+                        ._c-columns
+                            ._c-column
+                                ._c-item
+                                    label._label(for="name") Ваше имя <span>*</span>
+                                    input._input(type="text" placeholder="Иван" name="name" id="name")
+
+                                ._c-item
+                                    label._label(for="city") Город
+                                    input._input(type="text" placeholder="Москва" name="city" id="city")
+
+                                ._c-item
+                                    label._label(for="comment") Комментарий
+                                    textarea._textarea(name="comment" placeholder="Ваше сообщение")
+
+                            ._c-column
+                                ._c-item
+                                    label._label(for="number") Номер телефона
+                                    input._input(type="text" placeholder="+7 (985) 785-65-83" name="number" id="number")
+
+                                ._c-item
+                                    label._label(for="address") Адрес
+                                    input._input(type="text" name="address" id="address" placeholder="Ленинградская, 158/5, кв. 7")
+
+                                ._c-item
+                                    label._label(for="email") E-mail
+                                    input._input(type="text" name="email" id="email" placeholder="ivanka@yandex.ru")
+
+                ._btns
+                    button._zapr.button-reverse Запросить стоимость
+
+                    a(href="#")._order.button
+                        span Оформить
+
+
+    section.about
+        .section
+            h2.about__title.section__title.section__title--circle О кабинах <span>Vocaton<sub>™</sub></span>
+
+            .about__content
+                p.about__text-block.about__f-block IzoCab™ — это твое личное пространство, звукоизоляционная кабина, где тебя больше никто не потревожит, и ты никого не побеспокоишь. Она собирается легко, как конструктор, в ней есть вентиляция и все удобства для работы. Отныне концентрируйся только на себе и своих талантах. Настало время достижений — обрети абсолютную свободу с IzoCab™.
+
+                .about__img
+                    img(src="img/about-img.png", alt="О кабинах")
+
+                p.about__text-block.about__s-block Среди клиентов IzoCab™ ведущие телерадиовещательные компании СНГ, мировые производители развлекательного контента, известные музыканты и артисты, продюсерские центры и продакшн-студии, а также бесчисленное количество творческих людей.
 
