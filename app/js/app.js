@@ -57,6 +57,7 @@ $(document).ready(function () {
     hamBtn.addEventListener('click', function () {
         hamBtn.classList.toggle('is-active');
         mobileMenu.classList.toggle('active');
+        document.querySelector('body').classList.toggle('mob-nav-active');
     });
 
 
@@ -267,5 +268,177 @@ $(document).ready(function () {
         showMaskOnHover: false,
         placeholder: '  ',
     });
+
+    // for who
+    if (document.querySelector('.for')) {
+        const forItems = document.querySelectorAll('.for__item');
+        let forRight = document.querySelectorAll('.for__right');
+
+        forItems.forEach(e => {
+
+            if (window.matchMedia('(min-width: 768px)').matches) {
+                e.addEventListener('mouseenter', function () {
+
+                    forItems.forEach(elem => {
+                        elem.classList.remove('active');
+                    });
+                    this.classList.add('active');
+
+                    let index = this.getAttribute('data-item');
+                    if (e.classList.contains('active')) {
+                        $('.for__right-item').fadeOut(300);
+                        $(`.for__right-${index}`).fadeIn(300);
+                    }
+
+
+                });
+            } else {
+
+                forItems.forEach(elem => {
+                    elem.classList.remove('active')
+                });
+
+                e.addEventListener('click', function () {
+                    if (e.classList.contains('active')) {
+                        e.classList.remove('active')
+                        e.children[1].style.height = '0px';
+                    } else {
+                        e.classList.add('active');
+                        e.children[1].style.height = e.children[1].scrollHeight + 'px';
+                    }
+
+
+
+                });
+            }
+
+        });
+
+    }
+
+    if (document.querySelector('.youtube')) {
+        const swiperYoutube = new Swiper('.youtube__container', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            slidesPerGroup: 2,
+
+            pagination: {
+                el: '.youtube__pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    if (current >= 10 && total >= 10) {
+                        return `<span class="first__pagination-current">${current}</span> <div class="first__pagination-line"></div> <span class="first__pagination-total">${total}</span>`;
+                    } else if (current <= 10 && total >= 10) {
+                        return `<span class="first__pagination-current">0${current}</span> <div class="first__pagination-line"></div> <span class="first__pagination-total">${total}</span>`;
+                    } else if (current >= 10 && total >= 10) {
+                        return `<span class="first__pagination-current">${current}</span> <div class="first__pagination-line"></div> <span class="first__pagination-total">${total}</span>`;
+                    } else {
+                        return `<span class="first__pagination-current">0${current}</span> <div class="first__pagination-line"></div> <span class="first__pagination-total">0${total}</span>`;
+                    }
+                },
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            breakpoints: {
+                0: {
+                    spaceBetween: 10,
+                    slidesPerView: 1,
+                    slidesPerGroup: 1
+                },
+
+                576: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2
+                },
+
+                768: {
+                    spaceBetween: 20
+                }
+            }
+        });
+    }
+
+    if (document.querySelector('.insta')) {
+        const swiperInsta = new Swiper('.insta__container', {
+            slidesPerGroup: 1,
+            nested: true,
+
+
+            pagination: {
+                el: '.youtube__pagination',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    if (current >= 10 && total >= 10) {
+                        return `<span class="first__pagination-current">${current}</span> <div class="first__pagination-line"></div> <span class="first__pagination-total">${total}</span>`;
+                    } else if (current <= 10 && total >= 10) {
+                        return `<span class="first__pagination-current">0${current}</span> <div class="first__pagination-line"></div> <span class="first__pagination-total">${total}</span>`;
+                    } else if (current >= 10 && total >= 10) {
+                        return `<span class="first__pagination-current">${current}</span> <div class="first__pagination-line"></div> <span class="first__pagination-total">${total}</span>`;
+                    } else {
+                        return `<span class="first__pagination-current">0${current}</span> <div class="first__pagination-line"></div> <span class="first__pagination-total">0${total}</span>`;
+                    }
+                },
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            breakpoints: {
+                0: {
+                    spaceBetween: 10,
+                    slidesPerView: 1,
+                    slidesPerGroup: 1
+                },
+
+                576: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 1,
+                    spaceBetween: 10,
+                },
+
+                768: {
+                    spaceBetween: 20,
+                    slidesPerGroup: 1,
+                    slidesPerView: 3
+                }
+            }
+        });
+    }
+
+    if (document.querySelector('.footer__models')) {
+        let fModelsLabel = document.querySelector('.footer__models .footer__column-label')
+        let fModelsList = document.querySelector('.footer__m-list');
+
+        fModelsLabel.addEventListener('click', function () {
+            if (fModelsLabel.classList.contains('active')) {
+                fModelsList.style.height = '0';
+                fModelsLabel.classList.remove('active');
+            } else {
+                fModelsLabel.classList.add('active');
+                fModelsList.style.height = fModelsList.scrollHeight + 'px';
+            }
+        });
+    }
+
+    document.querySelector('.footer__up').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+    document.querySelector('.deliv__link').addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
 
 });

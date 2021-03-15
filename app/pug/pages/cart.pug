@@ -1,0 +1,122 @@
+extends ../layout/default
+
+block content
+    .breadcrumbs.section
+        ul._list
+            li._item
+                a(href="/")._item-text Главная
+
+            li._item
+                span._item-text Корзина
+
+
+    section.deliv.section.cart__page
+        h2._title.section__title.section__title--circle.page__title Оформление
+            span заказа
+
+    section.cart.section
+        ._wrap
+            ._deliv
+                p._d-title Доставка и способ оплаты
+                    span
+                        img(src="img/cart-box.svg", alt="Иконка")
+
+
+                ._d-item
+                    span._f-label Плательщик
+
+                    ._f-radios
+                        ._f-radio-item
+                            input(type="radio" name="platelshik" id="fiz-lico" checked)
+                            label(for="fiz-lico") Физическое лицо
+
+                        ._f-radio-item
+                            input(type="radio" name="platelshik" id="yr-lico")
+                            label(for="yr-lico") Юридическое лицо
+
+                ._d-item
+                    span._f-label Оплата
+
+                    ._f-radios
+
+                        ._f-radio-item
+                            input(type="radio" name="sposob-pay" id="nalichnie" checked)
+                            label(for="nalichnie") Наличный расчет
+
+
+                        ._f-radio-item
+                            input(type="radio" name="sposob-pay" id="beznal")
+                            label(for="beznal") Безналичный расчет
+
+                ._d-item.cart__d-item--last
+                    span._f-label Доставка
+
+                    ._f-radios
+                        ._f-radio-item
+                            input(type="radio" name="sposob-deliv" id="transport" checked)
+                            label(for="transport") Транспортной компанией
+
+                        ._f-radio-item
+                            input(type="radio" name="sposob-deliv" id="samovizov")
+                            label(for="samovizov") Самовывоз
+
+                p._d-title.cart__y-title Ваши данные
+                    span
+                        img(src="img/cart-file.svg", alt="Иконка")
+
+
+                        .calc__c-item
+                            label.calc__label(for="fio") Фамилия Имя Отчество <span>*</span>
+                            input.calc__input(type="text" placeholder="Ивановский Иван Иванович" name="fio" id="fio")
+
+                    .calc__c-columns
+                        .calc__c-column
+                            .calc__c-item
+                                label.calc__label(for="number") Номер телефона
+                                input.calc__input(type="text" placeholder="+7 (925) 985-35-78" name="number" id="number")
+
+                            .calc__c-item
+                                label.calc__label(for="city") Город
+                                input.calc__input(type="text" placeholder="Москва" name="city" id="city")
+
+
+                        .calc__c-column
+                            .calc__c-item
+                                label.calc__label(for="email") E-mail
+                                input.calc__input(type="text" placeholder="ivanka@yandex.ru" name="email" id="email")
+
+                            .calc__c-item
+                                label.calc__label(for="address") Адрес
+                                input.calc__input(type="text" placeholder="Ленинградская, 158/5, кв. 7" name="address" id="address")
+
+                    .calc__c-item
+                        label.calc__label(for="comment") Комментарий
+                        textarea.calc__textarea(name="comment" placeholder="Я хочу...")
+
+
+            ._goods
+
+                p._d-title Ваши товары
+                    span
+                        img(src="img/cart-barcode.svg", alt="Иконка")
+
+                ._g-item
+                    ._g-img
+                        img(src="img/cart-img_1.png", alt="Vocaton")
+
+                    ._g-info
+                        p._g-name Vocaton <sub>™</sub> Mega
+
+                        ._g-colors
+                            ._g-color
+                                span._g-color-name Цвет снаружи
+                                span._g-color-hex
+
+                            ._g-color
+                                span._g-color-name Цвет внутри
+                                span._g-color-hex
+
+                        p._price 161 100 <span>₽</span>
+
+                    ._g-count
+                    
