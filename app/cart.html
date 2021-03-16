@@ -6,8 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
-		<link rel="stylesheet" href="css/libs.min.css?v=9.00">
-		<link rel="stylesheet" href="css/app.css?v=9.00">
+		<link rel="stylesheet" href="css/libs.min.css?v=10.00">
+		<link rel="stylesheet" href="css/app.css?v=10.00">
 	</head>
 	<body>
 		<header class="header section">
@@ -141,7 +141,7 @@
 			<section class="cart section">
 				<div class="cart__wrap">
 					<div class="cart__deliv">
-						<p class="cart__d-title">Доставка и способ оплаты<span><img src="img/cart-box.svg" alt="Иконка"></span></p>
+						<p class="cart__d-title">Доставка и способ&nbsp;оплаты<span><img src="img/cart-box.svg" alt="Иконка"></span></p>
 						<div class="cart__d-item"><span class="cart__f-label">Плательщик</span>
 							<div class="cart__f-radios">
 								<div class="cart__f-radio-item">
@@ -210,20 +210,94 @@
 								<textarea class="calc__textarea" name="comment" placeholder="Я хочу..."></textarea>
 							</div>
 						</p>
+						<button class="cart__r-order button"><span>Оформить заказ</span></button>
 					</div>
 					<div class="cart__goods">
 						<p class="cart__d-title">Ваши товары<span><img src="img/cart-barcode.svg" alt="Иконка"></span></p>
 						<div class="cart__g-item">
 							<div class="cart__g-img"><img src="img/cart-img_1.png" alt="Vocaton"></div>
 							<div class="cart__g-info">
-								<p class="cart__g-name">Vocaton <sub>™</sub> Mega</p>
+								<p class="cart__g-name">Vocaton<sub>™</sub> Mega</p>
 								<div class="cart__g-colors">
-									<div class="cart__g-color"><span class="cart__g-color-name">Цвет снаружи</span><span class="cart__g-color-hex"></span></div>
-									<div class="cart__g-color"><span class="cart__g-color-name">Цвет внутри</span><span class="cart__g-color-hex"></span></div>
+									<div class="cart__g-color"><span class="cart__g-color-name">Цвет снаружи</span><span class="cart__g-color-hex" style="background:#F5D9A0"></span></div>
+									<div class="cart__g-color"><span class="cart__g-color-name">Цвет внутри</span><span class="cart__g-color-hex" style="background:#E24466"></span></div>
 								</div>
-								<p class="cart__price">161 100 <span>₽</span></p>
+								<div class="cart__prices">
+									<p class="cart__old-price">179 000 ₽</p>
+									<p class="cart__price">161 100 <span>₽</span></p>
+								</div>
+								<div class="cart__g-discounts">
+									<div class="cart__g-disc-item"><span class="cart__g-disc-label">Скидка:</span><span class="cart__g-disc-text">-25%</span></div>
+									<div class="cart__g-disc-item"><span class="cart__g-disc-label">Общая сумма:</span><span class="cart__g-disc-text">161 000 ₽</span></div>
+								</div>
 							</div>
-							<div class="cart__g-count"></div>
+							<div class="cart__g-count-wrap">
+								<div class="cart__g-count">
+									<div class="cart__g-minus disable">
+										<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="2" height="10" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 10 2)" fill="white"></rect>
+										</svg>
+									</div>
+									<input type="text" value="1 шт.">
+									<div class="cart__g-plus">
+										<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="2" height="10" transform="matrix(1 0 0 -1 4 10)" fill="white"></rect>
+											<rect width="2" height="10" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 10 6)" fill="white"></rect>
+										</svg>
+									</div>
+								</div><a class="cart__g-delete" href="#">
+									<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.08228 12.9366C2.15022 13.5595 2.70915 14.0244 3.35936 13.999H8.81386C9.47596 14.0244 10.0445 13.5501 10.1126 12.9158L11 4H1L2.08228 12.9366Z" fill="#005ECD"></path>
+										<path d="M11.4858 2.00005H9.08482V1.49156C9.11336 0.696837 8.49222 0.0294852 7.69755 0.000940608C7.67147 5.5274e-06 7.64533 -0.000240546 7.61925 0.000251601H4.37949C3.58438 -0.0144636 2.92795 0.618143 2.91324 1.41326C2.91274 1.43934 2.91299 1.46547 2.91393 1.49156V2H0.514245C0.230227 2 0 2.23023 0 2.51424C0 2.79826 0.230227 3.02849 0.514245 3.02849H11.4858C11.7698 3.02849 12 2.79826 12 2.51424C12 2.23023 11.7697 2.00005 11.4858 2.00005ZM8.05632 1.49156V2H3.94237V1.49156C3.91338 1.2662 4.07259 1.06004 4.29794 1.03105C4.32496 1.02756 4.35228 1.02682 4.37944 1.02874H7.6192C7.84583 1.0127 8.04259 1.18342 8.05864 1.41006C8.06061 1.43722 8.05982 1.46454 8.05632 1.49156Z" fill="#005ECD"></path>
+									</svg><span>Удалить из корзины</span><span class="cart__mob-del">Удалить</span></a>
+							</div>
+						</div>
+						<div class="cart__g-item">
+							<div class="cart__g-img"><img src="img/cart-img_1.png" alt="Vocaton"></div>
+							<div class="cart__g-info">
+								<p class="cart__g-name">Vocaton<sub>™</sub> Extra</p>
+								<div class="cart__g-colors">
+									<div class="cart__g-color"><span class="cart__g-color-name">Цвет снаружи</span><span class="cart__g-color-hex" style="background:#F5D9A0"></span></div>
+									<div class="cart__g-color"><span class="cart__g-color-name">Цвет внутри</span><span class="cart__g-color-hex" style="background:#E24466"></span></div>
+								</div>
+								<div class="cart__prices">
+									<p class="cart__price">161 100 <span>₽</span></p>
+								</div>
+							</div>
+							<div class="cart__g-count-wrap">
+								<div class="cart__g-count">
+									<div class="cart__g-minus disable">
+										<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="2" height="10" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 10 2)" fill="white"></rect>
+										</svg>
+									</div>
+									<input type="text" value="1 шт.">
+									<div class="cart__g-plus">
+										<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="2" height="10" transform="matrix(1 0 0 -1 4 10)" fill="white"></rect>
+											<rect width="2" height="10" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 10 6)" fill="white"></rect>
+										</svg>
+									</div>
+								</div><a class="cart__g-delete" href="#">
+									<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.08228 12.9366C2.15022 13.5595 2.70915 14.0244 3.35936 13.999H8.81386C9.47596 14.0244 10.0445 13.5501 10.1126 12.9158L11 4H1L2.08228 12.9366Z" fill="#005ECD"></path>
+										<path d="M11.4858 2.00005H9.08482V1.49156C9.11336 0.696837 8.49222 0.0294852 7.69755 0.000940608C7.67147 5.5274e-06 7.64533 -0.000240546 7.61925 0.000251601H4.37949C3.58438 -0.0144636 2.92795 0.618143 2.91324 1.41326C2.91274 1.43934 2.91299 1.46547 2.91393 1.49156V2H0.514245C0.230227 2 0 2.23023 0 2.51424C0 2.79826 0.230227 3.02849 0.514245 3.02849H11.4858C11.7698 3.02849 12 2.79826 12 2.51424C12 2.23023 11.7697 2.00005 11.4858 2.00005ZM8.05632 1.49156V2H3.94237V1.49156C3.91338 1.2662 4.07259 1.06004 4.29794 1.03105C4.32496 1.02756 4.35228 1.02682 4.37944 1.02874H7.6192C7.84583 1.0127 8.04259 1.18342 8.05864 1.41006C8.06061 1.43722 8.05982 1.46454 8.05632 1.49156Z" fill="#005ECD"></path>
+									</svg><span>Удалить из корзины</span><span class="cart__mob-del">Удалить</span></a>
+							</div>
+						</div>
+						<div class="cart__g-overall">
+							<div class="cart__g-coupon">
+								<input type="text" placeholder="Ваш промокод">
+								<button>
+									<svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="2" height="16" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 16 8)" fill="white"></rect>
+										<path d="M10.6562 1.34277L16.3131 6.99963L10.6562 12.6565" stroke="white" stroke-width="2"></path>
+									</svg>
+								</button>
+							</div>
+							<div class="cart__g-ov-price"><span class="cart__g-ov-text">Общая сумма заказа</span>
+								<p class="cart__g-ov-price-text">691 100<span>₽</span></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -341,7 +415,7 @@
 				<div class="footer__rights">2020 © Все права защищены</div>
 			</div>
 		</footer>
-		<script src="js/libs.min.js?v=9.00"></script>
-		<script src="js/app.js?v=9.00"></script>
+		<script src="js/libs.min.js?v=10.00"></script>
+		<script src="js/app.js?v=10.00"></script>
 	</body>
 </html>

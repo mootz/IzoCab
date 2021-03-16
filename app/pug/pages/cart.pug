@@ -17,7 +17,7 @@ block content
     section.cart.section
         ._wrap
             ._deliv
-                p._d-title Доставка и способ оплаты
+                p._d-title Доставка и способ&nbsp;оплаты
                     span
                         img(src="img/cart-box.svg", alt="Иконка")
 
@@ -94,6 +94,10 @@ block content
                         textarea.calc__textarea(name="comment" placeholder="Я хочу...")
 
 
+                button._r-order.button
+                    span Оформить заказ
+
+
             ._goods
 
                 p._d-title Ваши товары
@@ -105,18 +109,104 @@ block content
                         img(src="img/cart-img_1.png", alt="Vocaton")
 
                     ._g-info
-                        p._g-name Vocaton <sub>™</sub> Mega
+                        p._g-name Vocaton<sub>™</sub> Mega
 
                         ._g-colors
                             ._g-color
                                 span._g-color-name Цвет снаружи
-                                span._g-color-hex
+                                span._g-color-hex(style="background:#F5D9A0")
 
                             ._g-color
                                 span._g-color-name Цвет внутри
-                                span._g-color-hex
+                                span._g-color-hex(style="background:#E24466")
 
-                        p._price 161 100 <span>₽</span>
+                        ._prices
+                            p._old-price 179 000 ₽
+                            p._price 161 100 <span>₽</span>
 
-                    ._g-count
-                    
+                        ._g-discounts
+                            ._g-disc-item
+                                span._g-disc-label Скидка:
+
+                                span._g-disc-text -25%
+
+                            ._g-disc-item
+                                span._g-disc-label Общая сумма:
+
+                                span._g-disc-text 161 000 ₽
+
+                    ._g-count-wrap
+                        ._g-count
+                            ._g-minus.disable
+                                svg(width='10' height='2' viewBox='0 0 10 2' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    rect(width='2' height='10' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 10 2)' fill='white')
+                            input(type="text" value="1 шт.")
+
+                            ._g-plus
+                                svg(width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    rect(width='2' height='10' transform='matrix(1 0 0 -1 4 10)' fill='white')
+                                    rect(width='2' height='10' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 10 6)' fill='white')
+
+                        a._g-delete(href="#")
+                            svg(width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M2.08228 12.9366C2.15022 13.5595 2.70915 14.0244 3.35936 13.999H8.81386C9.47596 14.0244 10.0445 13.5501 10.1126 12.9158L11 4H1L2.08228 12.9366Z' fill='#005ECD')
+                                path(d='M11.4858 2.00005H9.08482V1.49156C9.11336 0.696837 8.49222 0.0294852 7.69755 0.000940608C7.67147 5.5274e-06 7.64533 -0.000240546 7.61925 0.000251601H4.37949C3.58438 -0.0144636 2.92795 0.618143 2.91324 1.41326C2.91274 1.43934 2.91299 1.46547 2.91393 1.49156V2H0.514245C0.230227 2 0 2.23023 0 2.51424C0 2.79826 0.230227 3.02849 0.514245 3.02849H11.4858C11.7698 3.02849 12 2.79826 12 2.51424C12 2.23023 11.7697 2.00005 11.4858 2.00005ZM8.05632 1.49156V2H3.94237V1.49156C3.91338 1.2662 4.07259 1.06004 4.29794 1.03105C4.32496 1.02756 4.35228 1.02682 4.37944 1.02874H7.6192C7.84583 1.0127 8.04259 1.18342 8.05864 1.41006C8.06061 1.43722 8.05982 1.46454 8.05632 1.49156Z' fill='#005ECD')
+
+                            span Удалить из корзины
+                            span._mob-del Удалить
+
+
+                ._g-item
+                    ._g-img
+                        img(src="img/cart-img_1.png", alt="Vocaton")
+
+                    ._g-info
+                        p._g-name Vocaton<sub>™</sub> Extra
+
+                        ._g-colors
+                            ._g-color
+                                span._g-color-name Цвет снаружи
+                                span._g-color-hex(style="background:#F5D9A0")
+
+                            ._g-color
+                                span._g-color-name Цвет внутри
+                                span._g-color-hex(style="background:#E24466")
+
+                        ._prices
+                            p._price 161 100 <span>₽</span>
+
+                    ._g-count-wrap
+                        ._g-count
+                            ._g-minus.disable
+                                svg(width='10' height='2' viewBox='0 0 10 2' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    rect(width='2' height='10' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 10 2)' fill='white')
+                            input(type="text" value="1 шт.")
+
+                            ._g-plus
+                                svg(width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                    rect(width='2' height='10' transform='matrix(1 0 0 -1 4 10)' fill='white')
+                                    rect(width='2' height='10' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 10 6)' fill='white')
+
+                        a._g-delete(href="#")
+                            svg(width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M2.08228 12.9366C2.15022 13.5595 2.70915 14.0244 3.35936 13.999H8.81386C9.47596 14.0244 10.0445 13.5501 10.1126 12.9158L11 4H1L2.08228 12.9366Z' fill='#005ECD')
+                                path(d='M11.4858 2.00005H9.08482V1.49156C9.11336 0.696837 8.49222 0.0294852 7.69755 0.000940608C7.67147 5.5274e-06 7.64533 -0.000240546 7.61925 0.000251601H4.37949C3.58438 -0.0144636 2.92795 0.618143 2.91324 1.41326C2.91274 1.43934 2.91299 1.46547 2.91393 1.49156V2H0.514245C0.230227 2 0 2.23023 0 2.51424C0 2.79826 0.230227 3.02849 0.514245 3.02849H11.4858C11.7698 3.02849 12 2.79826 12 2.51424C12 2.23023 11.7697 2.00005 11.4858 2.00005ZM8.05632 1.49156V2H3.94237V1.49156C3.91338 1.2662 4.07259 1.06004 4.29794 1.03105C4.32496 1.02756 4.35228 1.02682 4.37944 1.02874H7.6192C7.84583 1.0127 8.04259 1.18342 8.05864 1.41006C8.06061 1.43722 8.05982 1.46454 8.05632 1.49156Z' fill='#005ECD')
+
+                            span Удалить из корзины
+                            span._mob-del Удалить
+                ._g-overall
+                    ._g-coupon
+                        input(type="text" placeholder="Ваш промокод")
+                        button
+                            svg(width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                rect(width='2' height='16' transform='matrix(-4.37114e-08 -1 -1 4.37114e-08 16 8)' fill='white')
+                                path(d='M10.6562 1.34277L16.3131 6.99963L10.6562 12.6565' stroke='white' stroke-width='2')
+
+                    ._g-ov-price
+                        span._g-ov-text Общая сумма заказа
+                        p._g-ov-price-text 691 100
+                            span ₽
+
+
+
+

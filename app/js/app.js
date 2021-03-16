@@ -320,10 +320,10 @@ $(document).ready(function () {
         const swiperYoutube = new Swiper('.youtube__container', {
             slidesPerView: 2,
             spaceBetween: 20,
-            slidesPerGroup: 2,
+            slidesPerGroup: 1,
 
             pagination: {
-                el: '.youtube__pagination',
+                el: '.yt-pag',
                 type: 'custom',
                 renderCustom: function (swiper, current, total) {
                     if (current >= 10 && total >= 10) {
@@ -339,13 +339,13 @@ $(document).ready(function () {
             },
 
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.yt-next',
+                prevEl: '.yt-prev',
             },
 
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
 
             breakpoints: {
                 0: {
@@ -373,7 +373,7 @@ $(document).ready(function () {
 
 
             pagination: {
-                el: '.youtube__pagination',
+                el: '.inst-pag',
                 type: 'custom',
                 renderCustom: function (swiper, current, total) {
                     if (current >= 10 && total >= 10) {
@@ -389,13 +389,13 @@ $(document).ready(function () {
             },
 
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.inst-next',
+                prevEl: '.inst-prev',
             },
 
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
 
             breakpoints: {
                 0: {
@@ -434,11 +434,45 @@ $(document).ready(function () {
         });
     }
 
+
+
     document.querySelector('.footer__up').addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     })
-    document.querySelector('.deliv__link').addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    })
+
+    if (document.querySelector('.cart__g-minus')) {
+        let minus = document.querySelectorAll('.cart__g-minus');
+        let plus = document.querySelectorAll('.cart__g-plus');
+
+        minus.forEach(e => {
+            let input = e.nextElementSibling
+
+            e.addEventListener('click', function () {
+                let number = input.value.substring(0, input.value.length - 4);
+                let newValue = +number - 1;
+                if (newValue != 0) {
+                    input.value = `${newValue} шт.`;
+                }
+                if (newValue == 1) {
+                    e.classList.add('disable');
+                }
+            })
+        });
+
+        plus.forEach(e => {
+            let input = e.previousElementSibling
+
+            e.addEventListener('click', function () {
+                let number = input.value.substring(0, input.value.length - 4);
+                let newValue = +number + 1;
+                if (newValue != 1) {
+                    input.value = `${newValue} шт.`;
+                }
+                if (newValue > 1) {
+                    e.previousElementSibling.previousElementSibling.classList.remove('disable');
+                }
+            })
+        });
+    }
 
 });
