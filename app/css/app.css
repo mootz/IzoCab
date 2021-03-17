@@ -1089,7 +1089,16 @@ sub {
   .first__btns {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+    .first__btns:hover .first__button::before {
+      opacity: 1; }
+    .first__btns:hover .first__share::before {
+      opacity: 1; }
+    .first__btns:hover .first__share .active {
+      opacity: 1; }
   .first__button {
     width: 174px;
     text-transform: uppercase;
@@ -1120,8 +1129,9 @@ sub {
     background: #fff;
     position: relative; }
     .first__share::before {
-      background: -o-linear-gradient(198.92deg, #8E1FE6 -14.26%, #531FE6 187.45%);
-      background: linear-gradient(251.08deg, #8E1FE6 -14.26%, #531FE6 187.45%);
+      background: -webkit-gradient(linear, left top, left bottom, from(#8E1FE6), to(#531FE6)), #8E1FE6;
+      background: -o-linear-gradient(top, #8E1FE6 0%, #531FE6 100%), #8E1FE6;
+      background: linear-gradient(180deg, #8E1FE6 0%, #531FE6 100%), #8E1FE6;
       opacity: 0;
       content: '';
       width: 100%;
@@ -1146,10 +1156,6 @@ sub {
       transition: all 0.3s;
       opacity: 0;
       z-index: 2; }
-    .first__share:hover::before {
-      opacity: 1; }
-    .first__share:hover .active {
-      opacity: 1; }
   .first__gallery {
     max-width: 790px;
     width: 66%; }
@@ -1609,6 +1615,14 @@ sub {
     display: flex; }
   .goods__btn {
     width: calc(50% - 4px); }
+  .goods__btn-cart {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    .goods__btn-cart:hover {
+      background: #171F36;
+      color: #fff;
+      border-color: #171F36; }
   .goods__btn-cred {
     border-color: transparent;
     color: #8e1fe6;
@@ -1982,6 +1996,21 @@ sub {
       background: #494d4e; }
     .calc__select .option[data-value="Бежевый"]::before {
       background: #F5D99F; }
+
+.calc__c-colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.calc__c-color {
+  width: 11%;
+  height: 22px;
+  border: 1px solid transparent; }
+  .calc__c-color input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0; }
 
 .calc__btns {
   display: -webkit-box;
@@ -2371,7 +2400,8 @@ sub {
 
 .for {
   margin-bottom: 140px;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 80px; }
   .for__title {
     max-width: 376px;
     margin-top: 146px; }
@@ -2503,7 +2533,8 @@ sub {
     display: none; }
   @media screen and (max-width: 1200px) {
     .for {
-      margin-bottom: 80px; }
+      margin-bottom: 80px;
+      padding-bottom: 20px; }
       .for__list {
         width: 500px; }
       .for__title {
@@ -2680,7 +2711,14 @@ sub {
   .youtube__btns {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+    .youtube__btns:hover .youtube__share {
+      background: #f70000; }
+      .youtube__btns:hover .youtube__share path {
+        fill: #fff; }
   .youtube__button {
     background: #f70000;
     border-color: #F70000;
@@ -2693,10 +2731,6 @@ sub {
     border: 1px solid #F70000; }
     .youtube__button::before {
       display: none; }
-    .youtube__button:hover {
-      color: #f70000;
-      background: #fff;
-      border-color: #F70000; }
   .youtube__share {
     border-color: #F70000;
     -webkit-transition: all 0.2s;
@@ -2712,10 +2746,6 @@ sub {
       transition: all 0.2s; }
     .youtube__share::before {
       display: none; }
-    .youtube__share:hover {
-      background: #f70000; }
-      .youtube__share:hover path {
-        fill: #fff; }
   .youtube__desc {
     line-height: 25px;
     max-width: 576px;
@@ -2956,6 +2986,10 @@ sub {
 
 .insta {
   margin-top: 110px; }
+  .insta__btns:hover .youtube__share::before {
+    display: none; }
+  .insta__btns:hover .youtube__share::after {
+    opacity: 1; }
   .insta .youtube__desc {
     max-width: 626px; }
   .insta .youtube__share {
@@ -2966,15 +3000,31 @@ sub {
     transition: all 0.2s; }
     .insta .youtube__share svg {
       width: 40px;
-      height: 40px; }
+      height: 40px;
+      position: relative;
+      z-index: 1; }
     .insta .youtube__share rect {
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
       transition: all 0.2s; }
-    .insta .youtube__share:hover {
-      background: #8e1fe6; }
-      .insta .youtube__share:hover rect {
-        fill: #8e1fe6; }
+    .insta .youtube__share path {
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    .insta .youtube__share::after {
+      content: '';
+      background: -o-radial-gradient(13.25% 191.25%, 46.5% 232.5%, #FECF72 0%, #FCB45D 22.92%, #FBA04E 33.33%, #F8732C 53.01%, rgba(248, 115, 44, 0) 100%), -o-linear-gradient(299.82deg, #4B62D4 7.63%, #DC2D76 94.19%);
+      background: radial-gradient(46.5% 232.5% at 13.25% 191.25%, #FECF72 0%, #FCB45D 22.92%, #FBA04E 33.33%, #F8732C 53.01%, rgba(248, 115, 44, 0) 100%), linear-gradient(150.18deg, #4B62D4 7.63%, #DC2D76 94.19%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      opacity: 0; }
   .insta .youtube__button {
     border-color: transparent;
     position: relative;
@@ -2997,11 +3047,6 @@ sub {
       height: 100%;
       border-radius: 20px;
       z-index: 1; }
-    .insta .youtube__button:hover {
-      color: #8e1fe6;
-      border-color: #8e1fe6; }
-      .insta .youtube__button:hover::after {
-        opacity: 0; }
   .insta .youtube__wrapper {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -3204,7 +3249,7 @@ sub {
   background: #F7F9FC;
   max-width: 1400px;
   margin: 0 auto 0;
-  padding-bottom: 60px; }
+  margin-bottom: 60px; }
   .form__columns {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3264,9 +3309,21 @@ sub {
             justify-content: center;
     border-radius: 50%;
     border: 1px solid #DBDEE8;
-    margin-right: 10px; }
+    margin-right: 10px;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
     .form__social:last-child {
       margin-right: 0; }
+    .form__social path {
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+    .form__social:hover {
+      background: #171F36;
+      border-color: #171F36; }
+      .form__social:hover path {
+        fill: #fff; }
   .form__socials {
     display: -webkit-box;
     display: -ms-flexbox;

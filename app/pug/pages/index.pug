@@ -270,18 +270,22 @@ block content
                         ._c-columns
                             ._c-column
                                 ._c-item
-                                    label._label(for="color") Цвет кабинки внутри
-                                    select._select.color-inner(type="text" name="color" id="color")
-                                        option  Красный
-                                        option  Черный
-                                        option  Бордовый
-                                        option  Голубой
-                                        option  Желтый
-                                        option  Зеленый
-                                        option  Розовый
-                                        option  Синий
-                                        option  Фиолетовый
-                                        option  Оранжевый
+                                    p._label Цвет кабинки внутри
+                                    ._c-colors
+                                        label._c-color(for="c-purple" style="background: #8343A3")
+                                            input(type="radio" id="c-purple")
+
+                                    //- select._select.color-inner(type="text" name="color" id="color")
+                                    //-     option  Красный
+                                    //-     option  Черный
+                                    //-     option  Бордовый
+                                    //-     option  Голубой
+                                    //-     option  Желтый
+                                    //-     option  Зеленый
+                                    //-     option  Розовый
+                                    //-     option  Синий
+                                    //-     option  Фиолетовый
+                                    //-     option  Оранжевый
 
                             ._c-column
                                 ._c-item
@@ -641,7 +645,7 @@ block content
             .youtube__header
                 h2._title.section__title Instagram лента
 
-                .youtube__btns
+                .youtube__btns.insta__btns
                     a.button.youtube__button(href="youtube.com") <span>наш instagram</span>
 
                     a(href="#").first__share.youtube__share
