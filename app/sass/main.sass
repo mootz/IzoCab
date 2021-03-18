@@ -79,6 +79,12 @@ body
 
     &__item
 
+        sub
+            color: #a9b3ce
+            font-size: 15px
+            bottom: -0.45em
+            margin-right: 4px
+
         a
             transition: all 0.2s
 
@@ -327,6 +333,9 @@ sub
         font-size: 14px
         font-weight: bold
         color: $textcolor
+
+        .list
+            margin-top: 1px
 
     &__label
         // padding-left: 20px
@@ -1876,16 +1885,41 @@ sub
 
     &__c-colors
         display: flex
+        margin-top: 14px
 
-    &__c-color
+    &__c-color-wrap
         width: 11%
         height: 22px
-        border: 1px solid transparent
+
+        label
+            height: 100%
+            display: block
+            // border: 1px solid transparent
+            margin: 0 2px
+            position: relative
+
+            &::before
+                content: ''
+                width: calc(100% + 2px)
+                height: calc(100% + 2px)
+                top: -2px
+                left: -2px
+                border: 1px solid $textcolor
+                position: absolute
+                display: block
+                z-index: 2
+                tranistion: all 0.2s
+                opacity: 0
+
         input
             opacity: 0
             position: absolute
             width: 0
             height: 0
+
+            &:checked + label::before
+                opacity: 1
+
 
     &__btns
         display: flex

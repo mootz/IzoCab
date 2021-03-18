@@ -3,6 +3,21 @@ $(document).ready(function () {
     $('.calc__select').niceSelect();
     $.fancybox.defaults.touch = false;
 
+    // header numbers dd
+    const numbers = document.querySelectorAll('.nice-select.header__select');
+    numbers.forEach(e => {
+        e.addEventListener('mouseenter', function () {
+            this.classList.add('open')
+        })
+        e.addEventListener('mouseleave', function () {
+            this.classList.remove('open')
+        })
+
+    });
+
+    // document.querySelector('.header__select').addEventListener('mouseleave', function () {
+    //     this.classList.remove('open')
+    // }
 
     // mobile dropdown contacts\socials
     const tContact = document.querySelector('.header__t-contact');
