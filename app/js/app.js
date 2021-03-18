@@ -449,8 +449,6 @@ $(document).ready(function () {
         });
     }
 
-
-
     document.querySelector('.footer__up').addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     })
@@ -486,6 +484,51 @@ $(document).ready(function () {
                 if (newValue > 1) {
                     e.previousElementSibling.previousElementSibling.classList.remove('disable');
                 }
+            })
+        });
+    }
+
+    // product page
+    if (document.querySelector('.product__h-item')) {
+        let pHeader = document.querySelectorAll('.product__h-header')
+
+        pHeader.forEach(e => {
+            let pItem = e.parentNode;
+            let pContent = e.nextElementSibling;
+
+            e.addEventListener('click', function () {
+                if (pItem.classList.contains('active')) {
+                    pContent.style.height = '0';
+                    pItem.classList.remove('active');
+                } else {
+                    pItem.classList.add('active');
+                    pContent.style.height = pContent.scrollHeight + 'px';
+                }
+            })
+        });
+    }
+
+    if (document.querySelector('.product__main-img')) {
+        let colorInputsInner = document.querySelectorAll('.product__c-inner label')
+        let colorInputsOuter = document.querySelectorAll('.product__c-outer label')
+        let imgInner = document.querySelector('.product__inner-img')
+        let imgOuter = document.querySelector('.product__outer-img')
+
+        colorInputsInner.forEach(e => {
+            e.addEventListener('click', function () {
+                let newImgName = e.getAttribute('for');
+                let srcImg = imgInner.getAttribute('src').lastIndexOf('/')
+                let newSrcImg = imgInner.getAttribute('src').slice(0, srcImg + 1);
+                imgInner.setAttribute('src', `${newSrcImg}${newImgName}.png`)
+            })
+        });
+
+        colorInputsOuter.forEach(e => {
+            e.addEventListener('click', function () {
+                let newImgName = e.getAttribute('for');
+                let srcImg = imgOuter.getAttribute('src').lastIndexOf('/')
+                let newSrcImg = imgOuter.getAttribute('src').slice(0, srcImg + 1);
+                imgOuter.setAttribute('src', `${newSrcImg}${newImgName}.png`)
             })
         });
     }

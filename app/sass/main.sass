@@ -1882,7 +1882,6 @@ sub
             &[data-value="Бежевый"]::before
                 background: #F5D99F
 
-
     &__c-colors
         display: flex
         margin-top: 14px
@@ -1919,7 +1918,6 @@ sub
 
             &:checked + label::before
                 opacity: 1
-
 
     &__btns
         display: flex
@@ -2347,7 +2345,6 @@ sub
     margin-bottom: 140px
     overflow: hidden
     padding-bottom: 80px
-
 
     &__title
         max-width: 376px
@@ -3012,7 +3009,6 @@ sub
             transition: all 0.2s
             opacity: 0
 
-
     .youtube__button
         border-color: transparent
         position: relative
@@ -3376,7 +3372,6 @@ sub
 
         span
             color: #f00
-
 
     &__btns
         display: flex
@@ -4293,3 +4288,423 @@ sub
     @media screen and ( max-width: 340px )
         &__g-img
             width: 120px
+
+.product
+    &__wrap
+        display: flex
+        justify-content: space-between
+
+    &__right
+        width: fit-content
+
+    &__title
+        font-weight: 400
+        margin-bottom: 60px
+
+        &::after
+            width: 200px
+            height: 60px
+            top: -7px
+            left: 60px
+
+    &__sub-title
+        font-family: $neue
+        font-size: 18px
+        line-height: 17px
+        font-weight: bold
+        margin-bottom: 16px
+
+    &__g-text
+        font-size: 18px
+        line-height: 30px
+        color: #353c52
+
+        span
+            color: #8490af
+
+    &__g-item-text
+        font-size: 14px
+        line-height: 30px
+        font-weight: bold
+
+    &__profile
+        margin-bottom: 38px
+
+    &__c-item
+        display: flex
+        margin-bottom: 18px
+
+        span
+            font-family: $neue
+            font-size: 14px
+            line-height: 14px
+            font-weight: bold
+            margin-right: 16px
+
+    &__c-item
+        &:last-child
+            margin-bottom: 0
+            span
+                margin-right: 30px
+
+    .calc__c-colors
+        margin-top: 0
+
+    .calc__c-color-wrap
+        width: 34px
+        margin-right: 4px
+        height: 20px
+
+        &:last-child
+            margin-right: 0
+
+    &__p-wrap
+        display: flex
+        align-items: flex-end
+        margin-top: 30px
+        margin-bottom: 40px
+
+    &__p-old
+        font-size: 18px
+        line-height: 24px
+        margin-bottom: 4px
+        color: #999999
+        font-weight: 600
+        position: relative
+        width: fit-content
+
+        span
+            font-size: 75%
+
+        &::before
+            content: ''
+            top: 50%
+            position: absolute
+            transform: translateY(-50%)
+            height: 2px
+            width: calc(100% + 8px)
+            left: -4px
+            background: $accenttext
+
+    &__p-main
+        font-size: 36px
+        font-weight: 600
+        line-height: 44px
+        color: $accenttext
+
+        span
+            font-size: 24px
+            font-weight: bold
+            line-height: 29px
+
+    &__p-btns
+        display: flex
+
+    &__p-btn
+        width: 134px
+        height: 40px
+        font-size: 13px
+        font-weight: 16px
+        font-weight: 600
+
+    &__credit
+        background: #f8f9fc
+        border: 1px solid #ECEFF7
+        transition: all 0.2s
+        color: $accenttext
+
+        &:hover
+            border-color: $accenttext
+
+    &__add-cart
+        margin-right: 10px
+        margin-left: 26px
+
+    &__h-items
+        max-width: 480px
+
+    &__h-item
+        border: 1px solid #EBECEE
+        border-right: 0
+        border-left: 0
+        transition: all 0.2s
+
+        &.active
+
+            padding-bottom: 20px
+
+            .product__h-header
+                margin-bottom: 10px
+
+            .product__svg-vert-line
+                transform-origin: center
+                transform: scaleY(0)
+
+    &__h-header
+        padding: 18px 0
+        display: flex
+        justify-content: space-between
+        font-size: 14px
+        line-height: 14px
+        font-weight: bold
+        font-family: $neue
+        cursor: pointer
+        transition: all 0.2s
+
+    &__svg-vert-line
+        transition: all 0.2s
+
+    &__h-content
+        font-size: 14px
+        line-height: 24px
+        color: #56617e
+        transition: all 0.2s
+        height: 0
+        overflow: hidden
+
+    &__left
+        width: 480px
+        margin-right: 108px
+        flex-shrink: 0
+        position: relative
+
+    &__main-img
+        width: 482px
+        height: 482px
+        position: relative
+        margin-left: auto
+        margin-right: auto
+
+        img
+            position: absolute
+            width: 100%
+            height: 100%
+
+    &__alt-imgs
+        display: flex
+        justify-content: space-between
+        margin-top: 10px
+
+    &__alt-img
+        display: block
+        width: 23%
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__h-title
+        display: none
+
+    @media screen and ( max-width: 1300px )
+        &__left
+            margin-right: 40px
+
+    @media screen and ( max-width: 1200px )
+        &__main-img
+            width: 400px
+            height: 400px
+
+        &__left
+            width: 400px
+            margin-right: 0
+
+        &__p-wrap
+            flex-direction: column
+            align-items: flex-start
+
+        &__p-btns
+            margin-top: 20px
+
+        &__add-cart
+            margin-left: 0
+
+    @media screen and ( max-width: 992px )
+        position: relative
+
+        &__h-title
+            font-size: 32px
+            font-weight: 900
+            letter-spacing: 0.02em
+            line-height: 40px
+            margin-bottom: 28px
+            display: block
+            text-align: center
+
+        &__title
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            top: 0
+            margin-bottom: 0
+
+        &__wrap
+            flex-direction: column
+            padding-top: 80px
+
+        &__main-img
+            width: 450px
+            height: 450px
+
+        &__left
+            width: 450px
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 38px
+
+        &__h-items
+            max-width: 100%
+
+    @media screen and ( max-width: 768px )
+        &__main-img
+            width: 400px
+            height: 400px
+
+        &__left
+            width: 400px
+
+    @media screen and ( max-width: 576px )
+        &__main-img
+            width: 300px
+            height: 300px
+
+        &__left
+            width: 300px
+
+        &__c-item
+            flex-direction: column
+
+            span
+                margin-bottom: 10px
+
+        &__p-main
+            font-size: 32px
+            line-height: 38px
+
+        &__p-old
+            font-size: 16px
+            margin-bottom: 0
+
+        &__p-btn
+            width: calc(50% - 6px)
+            margin-right: 0
+
+        &__p-btns
+            width: 100%
+            justify-content: space-between
+
+        &__profile
+            padding-bottom: 30px
+            position: relative
+            margin-bottom: 26px
+
+            &::before
+                content: ''
+                position: absolute
+                background: #F0F2F5
+                height: 10px
+                width: calc(100% + 60px)
+                left: -30px
+                bottom: 0
+
+    @media screen and ( max-width: 400px )
+        &__profile
+            &::before
+                width: calc(100% + 32px)
+                left: -16px
+
+    @media screen and ( max-width: 380px )
+        &__main-img
+            width: 270px
+            height: 270px
+
+        &__h-title
+            font-size: 28px
+            line-height: 38px
+
+        &__left
+            width: 270px
+
+        .calc__c-color-wrap
+            margin-right: 0
+            width: 31px
+
+.intr
+    background-image: url('../img/about-bg.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    padding-top: 90px
+    padding-bottom: 100px
+    margin-top: 90px
+
+    &__title
+        margin-bottom: 60px
+
+        &::after
+            z-index: 0
+            left: 40px
+            top: -7px
+
+    &__t-text
+        position: relative
+        z-index: 1
+
+    &__t-second
+        display: block
+        margin-left: 40px
+
+    .goods__list
+        width: 100%
+
+    .goods__btn-cart
+        &:hover
+            background: linear-gradient(251.08deg, #8E1FE6 -14.26%, #531FE6 187.45%)
+            border-color: 0
+
+    .goods__btn-cred
+        font-size: 13px
+        font-weight: 600
+        border: 1px solid #BDC3D6
+        color: $textcolor
+
+        &:hover
+            background: $textcolor
+            color: #fff
+
+    @media screen and ( max-width: 1200px )
+        &__title::after
+            width: 262px
+            height: 97px
+            left: 0
+
+    @media screen and ( max-width: 992px )
+        padding-bottom: 80px
+        padding-top: 70px
+        margin-top: 60px
+
+    @media screen and ( max-width: 400px )
+        &__title
+            font-size: 28px
+
+            &::after
+                width: 232px
+                height: 87px
+                left: 10px
+
+.calc-prod
+    margin-top: 110px
+    margin-bottom: 80px
+
+    @media screen and ( max-width: 1200px )
+        margin-top: 70px
+        margin-bottom: 80px
+
+    @media screen and ( max-width: 768px )
+        margin-top: 40px
+        margin-bottom: 70px
+
+    @media screen and ( max-width: 576px )
+        margin-top: 20px
+        margin-bottom: 60px
