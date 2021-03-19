@@ -790,9 +790,11 @@ sub {
           width: 40px;
           height: 40px;
           border-color: #535D79; } }
-  @media screen and (max-width: 400px) {
-    .header__btn-menu {
-      left: 16px; } }
+  @media screen and (max-width: 500px) {
+    .header {
+      padding: 16px; }
+      .header__btn-menu {
+        left: 16px; } }
 
 .nav-bar {
   padding-top: 12px;
@@ -3624,6 +3626,8 @@ sub {
   .footer {
     position: relative;
     padding-bottom: 120px; }
+    .footer__numbers .footer__m-item, .footer__mess .footer__m-item {
+      height: 22px; }
     .footer__logo-column {
       display: -webkit-box;
       display: -ms-flexbox;

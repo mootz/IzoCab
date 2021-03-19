@@ -627,7 +627,9 @@ sub
                 height: 40px
                 border-color: #535D79
 
-    @media screen and ( max-width: 400px )
+    @media screen and ( max-width: 500px )
+        padding: 16px
+
         &__btn-menu
             left: 16px
 
@@ -3608,6 +3610,11 @@ sub
     @media screen and ( max-width: 576px )
         position: relative
         padding-bottom: 120px
+
+        &__numbers,
+        &__mess
+            .footer__m-item
+                height: 22px
 
         &__logo-column
             display: flex
