@@ -134,12 +134,22 @@ $(document).ready(function () {
         const fContent = document.querySelector('.calc__f-item .calc__item-content');
         const sContent = document.querySelector('.calc__s-item .calc__item-content');
         const orderBtns = document.querySelector('.calc__btns')
-        let fContentHeight = fContent.clientHeight + 'px';
+
+        const fContentHeight = function () {
+            if (window.matchMedia('(max-width: 768px').media) {
+                return fContent.scrollHeight + 'px';
+            } else {
+                return fContent.clientHeight + 'px';
+            }
+        }
+
+
+
 
 
         let accepted = false;
 
-        fContent.style.height = fContentHeight;
+        fContent.style.height = fContentHeight();
 
         document.querySelector('input[name="budget"]').addEventListener('input', function () {
             if (document.querySelector('input[name="budget"]').value != 0 && document.querySelector('input[name="size"]').value != 0) {
@@ -223,13 +233,15 @@ $(document).ready(function () {
         });
 
         let fBtnOpen = function () {
+
             sContent.style.height = '0';
             sItem.classList.remove('active');
             sBtn.classList.remove('disable');
             fBtn.classList.add('disable');
             orderBtns.classList.remove('item-active');
 
-            fContent.style.height = fContentHeight;
+            fContent.style.height = fContentHeight();
+
             fItem.classList.add('active');
 
             if (!sItem.classList.contains('non-active')) {
@@ -274,7 +286,6 @@ $(document).ready(function () {
         window.addEventListener("resize", function () {
             widthColumn = document.querySelector('.calc__c-column').clientWidth + 'px';
             buttonsOrder.style.width = widthColumn;
-            fContentHeight = fContent.clientHeight + 'px';
         });
     }
 
@@ -301,32 +312,27 @@ $(document).ready(function () {
 
                     let index = this.getAttribute('data-item');
                     if (e.classList.contains('active')) {
-                        $('.for__right-item').fadeOut(300);
-                        $(`.for__right-${index}`).fadeIn(300);
+                        $('.for__right-item').fadeOut(100);
+                        $(`.for__right-${index}`).fadeIn(100);
                     }
-
-
                 });
             } else {
-
-                forItems.forEach(elem => {
-                    elem.classList.remove('active')
-                });
-
                 e.addEventListener('click', function () {
                     if (e.classList.contains('active')) {
-                        e.classList.remove('active')
-                        e.children[1].style.height = '0px';
+                        forItems.forEach(elem => {
+                            elem.classList.remove('active')
+                            elem.children[1].style.height = '0px'
+                        });
                     } else {
+                        forItems.forEach(elem => {
+                            elem.classList.remove('active')
+                            elem.children[1].style.height = '0px'
+                        });
                         e.classList.add('active');
                         e.children[1].style.height = e.children[1].scrollHeight + 'px';
                     }
-
-
-
-                });
+                })
             }
-
         });
 
     }
@@ -435,6 +441,7 @@ $(document).ready(function () {
     }
 
     if (document.querySelector('.footer__models')) {
+        let fModels = document.querySelector('.footer__models')
         let fModelsLabel = document.querySelector('.footer__models .footer__column-label')
         let fModelsList = document.querySelector('.footer__m-list');
 
@@ -442,9 +449,11 @@ $(document).ready(function () {
             if (fModelsLabel.classList.contains('active')) {
                 fModelsList.style.height = '0';
                 fModelsLabel.classList.remove('active');
+                fModels.classList.remove('active')
             } else {
                 fModelsLabel.classList.add('active');
                 fModelsList.style.height = fModelsList.scrollHeight + 'px';
+                fModels.classList.add('active')
             }
         });
     }
@@ -497,12 +506,24 @@ $(document).ready(function () {
             let pContent = e.nextElementSibling;
 
             e.addEventListener('click', function () {
-                if (pItem.classList.contains('active')) {
-                    pContent.style.height = '0';
-                    pItem.classList.remove('active');
-                } else {
+                if (!pItem.classList.contains('active')) {
+                    pHeader.forEach(e => {
+                        let pItemSec = e.parentNode;
+                        let pContentSec = e.nextElementSibling;
+                        pContentSec.style.height = '0';
+                        pItemSec.classList.remove('active');
+                    })
                     pItem.classList.add('active');
                     pContent.style.height = pContent.scrollHeight + 'px';
+                } else {
+                    pHeader.forEach(e => {
+                        let pItemSec = e.parentNode;
+                        let pContentSec = e.nextElementSibling;
+                        pContentSec.style.height = '0';
+                        pItemSec.classList.remove('active');
+                    })
+                    pContent.style.height = '0';
+                    pItem.classList.remove('active');
                 }
             })
         });
@@ -532,5 +553,6 @@ $(document).ready(function () {
             })
         });
     }
+
 
 });

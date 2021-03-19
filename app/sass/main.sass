@@ -1898,6 +1898,7 @@ sub
             // border: 1px solid transparent
             margin: 0 2px
             position: relative
+            cursor: pointer
 
             &::before
                 content: ''
@@ -2388,6 +2389,26 @@ sub
                 transform: translateX(0px)
                 opacity: 1
 
+        &:nth-child(2)
+            img
+                transform: rotate(10deg)
+
+        &:nth-child(3)
+            img
+                transform: rotate(2deg)
+
+        &:nth-child(4)
+            img
+                transform: rotate(-5deg)
+
+        &:nth-child(5)
+            img
+                transform: rotate(6deg)
+
+        &:nth-child(6)
+            img
+                transform: rotate(12deg)
+
     &__number
         color: #97a1bc
         margin-right: 30px
@@ -2453,6 +2474,26 @@ sub
 
         &:first-child
             display: block
+
+    &__right-2
+        img
+            transform: rotate(10deg)
+
+    &__right-3
+        img
+            transform: rotate(2deg)
+
+    &__right-4
+        img
+            transform: rotate(-5deg)
+
+    &__right-5
+        img
+            transform: rotate(6deg)
+
+    &__right-6
+        img
+            transform: rotate(12deg)
 
     &__content
         display: none
@@ -2720,6 +2761,10 @@ sub
 
     &__slide
         position: relative
+
+        a
+            &:focus
+                outline: 0
 
         &:hover
             .youtube__play
@@ -3012,7 +3057,7 @@ sub
             opacity: 0
 
     .youtube__button
-        border-color: transparent
+        border: 0
         position: relative
         background: #fff
 
@@ -3044,20 +3089,27 @@ sub
         align-items: center
 
     .youtube__slide
-        &:hover
-            rect
-                stroke: $accenttext
+        a
+            display: block
 
+        .insta__i-link
+            rect,
             path
-                fill: $accenttext
+                transition: all 0.2s
+
+            &:hover
+                rect
+                    stroke: #000
+                    fill: #fff
+
+                path
+                    fill: #000
 
         &:nth-child(even)
-            .insta__i-img
-                margin-bottom: 60px
+            margin-bottom: 60px
 
         &:nth-child(3n)
-            .insta__i-img
-                margin-top: 60px
+            margin-top: 60px
 
     &__i-link
         position: absolute
@@ -3501,6 +3553,7 @@ sub
     &__logo
         width: 150px
         display: block
+        margin-left: -12px
 
         img
             width: 100%
@@ -3690,10 +3743,15 @@ sub
                 top: 0
                 left: -30px
                 width: calc(100% + 60px)
-                background: #0C1221
+                background: #171F36
                 height: 100%
                 border-top: 1px solid #2F3853
                 border-bottom: 1px solid #2F3853
+                transition: all 0.2s
+
+            &.active
+                &::before
+                    background: #0C1221
 
             .footer__column-label
                 position: relative
@@ -3868,12 +3926,18 @@ sub
             cursor: pointer
             transition: all 0.2s
 
+
+            &:hover
+                color: $textcolor
+
         &:first-child
             label
                 border-right: 2px solid transparent
+                margin-right: -2px
 
             input:checked + label
                 border: 2px solid $accenttext
+                color: $textcolor
 
         &:last-child
             label
@@ -3881,6 +3945,8 @@ sub
 
             input:checked + label
                 border: 2px solid $accenttext
+                color: $textcolor
+
 
     &__f-radios
         display: flex
@@ -3896,7 +3962,6 @@ sub
     .calc__textarea
         background: #f8f9fc
 
-        &:ac
 
     &__goods
         width: 50%
@@ -4180,9 +4245,10 @@ sub
             align-items: center
             margin-top: 28px
             width: 100%
+            justify-content: space-between
 
         &__g-count
-            width: 50%
+            width: calc(50% - 8px)
             input
                 width: 100%
 
@@ -4194,7 +4260,7 @@ sub
             border-radius: 30px
             border: 1px solid #005ECD
             margin-top: 0
-            width: 50%
+            width: calc(50% - 8px)
 
             svg
                 margin-right: 4px
@@ -4431,13 +4497,15 @@ sub
         max-width: 480px
 
     &__h-item
-        border: 1px solid #EBECEE
+        border-bottom: 1px solid #ebecee
         border-right: 0
         border-left: 0
         transition: all 0.2s
 
-        &.active
+        &--first
+            border-top: 1px solid #ebecee
 
+        &.active
             padding-bottom: 20px
 
             .product__h-header
@@ -4614,6 +4682,9 @@ sub
                 width: calc(100% + 60px)
                 left: -30px
                 bottom: 0
+
+        .calc__c-color
+            height: 22px
 
     @media screen and ( max-width: 400px )
         &__profile
